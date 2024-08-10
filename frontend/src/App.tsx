@@ -28,7 +28,15 @@ const App = () => {
           }
         />
 
-        <Route path="/register" element={<Register />} />
+        <Route
+          path="/register"
+          element={
+            <Layout>
+              {" "}
+              <Register />
+            </Layout>
+          }
+        />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>
